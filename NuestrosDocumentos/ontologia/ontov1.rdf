@@ -146,9 +146,180 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionViajesRealizados"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valoracion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaViajesRealizados"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Contrasena -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Contrasena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Destinatario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Destinatario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Emisario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Emisario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Horario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Horario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteAlojamiento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteAlojamiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteTotal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteTransporte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ImporteTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#NotaValoracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#NotaValoracion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valoracion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Pagado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Pagado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Precio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Precio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Ubicacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Ubicacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Usuario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Usuario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idActividades -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idActividades">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idAlojamiento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idAlojamiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idTransporte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idValoracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#idValoracion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valoracion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -182,7 +353,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
-        <rdfs:comment>Representa los alojamientos del viaje</rdfs:comment>
     </owl:Class>
     
 
@@ -497,7 +667,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
-        <rdfs:comment>Representa los medios de tranporte disponibles para un viaje</rdfs:comment>
     </owl:Class>
     
 
