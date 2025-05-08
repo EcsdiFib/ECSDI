@@ -92,8 +92,8 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
     </owl:ObjectProperty>
     
 
@@ -103,16 +103,17 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finaliza">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPlanDeViaje"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPan -->
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPlan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPan">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPlan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPlanDeViaje"/>
     </owl:ObjectProperty>
     
 
@@ -144,7 +145,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valora">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionViajesRealizados"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaViajesRealizados"/>
     </owl:ObjectProperty>
@@ -363,9 +364,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje -->
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPlanDeViaje -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje">
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPlanDeViaje">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
     </owl:Class>
     
@@ -392,6 +393,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
         <rdfs:comment>Representa un plan de un viaje realizado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
     </owl:Class>
     
 
@@ -452,9 +461,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje -->
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPlanDeViaje -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje">
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPlanDeViaje">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
     </owl:Class>
     
@@ -510,14 +519,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -543,8 +544,8 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calculador"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Recomendador"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
