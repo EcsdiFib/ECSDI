@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI/"
+     xml:base="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Acepta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Acepta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAceptarPlan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaEnviarPlanRecomendado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ActividadCancelada -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#ActividadCancelada">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividadesCanceladas"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionBuscarNuevasActividadesPorCancelacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividadesCanceladas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaBuscarNuevasActividadesPorCancelacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaActividades -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaActividades">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividades"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividades"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaAlojamiento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaAlojamiento">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAlojamiento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaAlojamiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscaTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionTransporte"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaTransporte"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calcula -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calcula">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calculador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finaliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finaliza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GuardarPan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Paga -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Paga">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAceptarPlan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Revisa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Revisa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionConsultarPlanesDeViaje"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valora -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionViajesRealizados"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaViajesRealizados"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+        <rdfs:comment>Representa las actividades que se van a desarrollar durante el viaje</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Alojamiento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+        <rdfs:comment>Representa los alojamientos del viaje</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Autobus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Autobus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:comment>Tipo de transporte</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Avion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:comment>Tipo de Trasnporte</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calculador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calculador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Comunicacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Comunicacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Culturales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Culturales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:comment>Representan las actividades de tipo culturales</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#EnProceso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#EnProceso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finalizado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Factura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finalizado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Finalizado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Ludicas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Ludicas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Actividad"/>
+        <rdfs:comment>Representan las actividades de tipo ludicas</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Comunicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAceptarPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAceptarPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividades -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividades">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividadesCanceladas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionActividadesCanceladas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAlojamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionAlojamiento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionBuscarNuevasActividadesPorCancelacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionBuscarNuevasActividadesPorCancelacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionConsultarPlanesDeViaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionConsultarPlanesDeViaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionGuardarPanDeViaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionTransporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionTransporte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionViajesRealizados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PeticionViajesRealizados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Peticion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#PlanDeViaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+        <rdfs:comment>Representa un plan de un viaje realizado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Comunicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividades -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividades">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividadesCanceladas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaActividadesCanceladas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaAlojamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaAlojamiento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaBuscarNuevasActividadesPorCancelacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaBuscarNuevasActividadesPorCancelacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaConsultarPlanesDeViaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaConsultarPlanesDeViaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaEnviarPlanRecomendado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaEnviarPlanRecomendado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaGuardarPanDeViaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaTransporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaTransporte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaViajesRealizados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RespuestaViajesRealizados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Respuesta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+        <rdfs:comment>Representa los medios de tranporte disponibles para un viaje</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Tren -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Tren">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Transporte"/>
+        <rdfs:comment>Tipo de transporte</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valoracion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valoracion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Datos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Agentes"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Autobus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Avion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Tren"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeActividades"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeAlojamiento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#BuscadorDeTransporte"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Calculador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDePagos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#GestorDeViajesRealizados"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#RevisadorDePlanes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aloha/ontologies/2025/3/ECSDI#Valorador"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
