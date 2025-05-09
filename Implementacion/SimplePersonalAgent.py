@@ -202,6 +202,29 @@ def tidyup():
     """
     pass
 
+def agentBehaviorTransport():
+    """
+    Un comportamiento del agente
+
+    :return:
+    """
+
+    # Buscamos en el directorio
+    # un agente de hoteles
+    gr = directory_search_message(agn.BuscadorDeTransporte)
+
+    # Obtenemos la direccion del agente de la respuesta
+    # No hacemos ninguna comprobacion sobre si es un mensaje valido
+    msg = gr.value(predicate=RDF.type, object=ACL.FipaAclMessage)
+    content = gr.value(subject=msg, predicate=ACL.content)
+    ragn_addr = gr.value(subject=content, predicate=DSO.Address)
+    ragn_uri = gr.value(subject=content, predicate=DSO.Uri)
+
+    # Ahora mandamos un objeto de tipo request mandando una accion de tipo Search
+    # que esta en una supuesta ontologia de acciones de agentes
+    infoagent_search_message(ragn_addr, ragn_uri)
+
+
 
 def agentbehavior1():
     """
@@ -227,7 +250,7 @@ def agentbehavior1():
 
 if __name__ == '__main__':
     # Ponemos en marcha los behaviors
-    ab1 = Process(target=agentbehavior1)
+    ab1 = Process(target=agentBehaviorTransport)
     ab1.start()
 
     # Ponemos en marcha el servidor
